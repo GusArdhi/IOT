@@ -8,7 +8,7 @@
 const char* WIFI_SSID = "Guspid";
 const char* WIFI_PASS = "1a2a3a4a5a";
 const char* HOSTNAME = "KELOMPOK4";
-const char* IOTBROKER = "public.cloud.shiftr.io";
+const char* IOTBROKER = "broker.hivemq.com";
 #define PIN_RELAY 32
 
 
@@ -68,7 +68,7 @@ void messageReceived(String &topic, String &payload)
   Serial.println("Incomming: " + topic + " - " + payload);
 
 
-  if(topic == "undiknas/ti/kelompok7/relay")
+  if(topic == "undiknas/ti/kelompok4/relay")
   {
     if(payload == "on")
     {
